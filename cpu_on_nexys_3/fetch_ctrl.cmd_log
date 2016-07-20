@@ -1,0 +1,3 @@
+vhdtdtfi -lib work fetch_ctrl.vhd -prj cpu -o fetch_ctrl.spl -module fetch_ctrl -template F:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e fetch_ctrl.spl G:/cpu/fetch_ctrl.sym 
+vhdtdtfi -prj cpu -o G:/cpu/fetch_ctrl.vhi -module fetch_ctrl -template F:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work fetch_ctrl.vhd 

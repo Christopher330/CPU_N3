@@ -1,0 +1,2642 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: cpu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : cpu
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\opcode.vhd" into library work
+Parsing package <opcode>.
+Parsing package body <opcode>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\wrbk_ctrl.vhd" into library work
+Parsing entity <wrbk_ctrl>.
+Parsing architecture <Behavioral> of entity <wrbk_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\stor_ctrl.vhd" into library work
+Parsing entity <stor_ctrl>.
+Parsing architecture <Behavioral> of entity <stor_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\memwr_ctrl.vhd" into library work
+Parsing entity <memwr_ctrl>.
+Parsing architecture <Behavioral> of entity <memwr_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\io_ctrl.vhd" into library work
+Parsing entity <io_ctrl>.
+Parsing architecture <Behavioral> of entity <io_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" into library work
+Parsing entity <hex_to_7seg>.
+Parsing architecture <Behavioral> of entity <hex_to_7seg>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\fetch_ctrl.vhd" into library work
+Parsing entity <fetch_ctrl>.
+Parsing architecture <Behavioral> of entity <fetch_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\clock_ctrl.vhd" into library work
+Parsing entity <clock_ctrl>.
+Parsing architecture <Behavioral> of entity <clock_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\alu_ctrl.vhd" into library work
+Parsing entity <alu_ctrl>.
+Parsing architecture <Behavioral> of entity <alu_ctrl>.
+Parsing VHDL file "G:\hwpractice\cpu_on_nexys_3\cpu.vhd" into library work
+Parsing entity <cpu>.
+Parsing architecture <Behavioral> of entity <cpu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <cpu> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clock_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <fetch_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu_ctrl> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\alu_ctrl.vhd" Line 109: rdata should be on the sensitivity list of the process
+
+Elaborating entity <stor_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <wrbk_ctrl> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "G:\hwpractice\cpu_on_nexys_3\wrbk_ctrl.vhd" Line 62. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\wrbk_ctrl.vhd" Line 64: pcack should be on the sensitivity list of the process
+
+Elaborating entity <memwr_ctrl> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\memwr_ctrl.vhd" Line 81: dbus should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\memwr_ctrl.vhd" Line 94: dbus should be on the sensitivity list of the process
+
+Elaborating entity <io_ctrl> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <hex_to_7seg> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" Line 74. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" Line 104. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" Line 108: an should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" Line 113: an should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" Line 118: an should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd" Line 123: an should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cpu>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\cpu.vhd".
+    Summary:
+	no macro.
+Unit <cpu> synthesized.
+
+Synthesizing Unit <clock_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\clock_ctrl.vhd".
+    Found 1-bit register for signal <t1>.
+    Found 1-bit register for signal <t2>.
+    Found 1-bit register for signal <t3>.
+    Found 1-bit register for signal <t4>.
+    Found 4-bit register for signal <t>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <clock_ctrl> synthesized.
+
+Synthesizing Unit <fetch_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\fetch_ctrl.vhd".
+    Found 23-bit register for signal <MAR>.
+    Found 1-bit register for signal <PCtemp<22>>.
+    Found 1-bit register for signal <PCtemp<21>>.
+    Found 1-bit register for signal <PCtemp<20>>.
+    Found 1-bit register for signal <PCtemp<19>>.
+    Found 1-bit register for signal <PCtemp<18>>.
+    Found 1-bit register for signal <PCtemp<17>>.
+    Found 1-bit register for signal <PCtemp<16>>.
+    Found 1-bit register for signal <PCtemp<15>>.
+    Found 1-bit register for signal <PCtemp<14>>.
+    Found 1-bit register for signal <PCtemp<13>>.
+    Found 1-bit register for signal <PCtemp<12>>.
+    Found 1-bit register for signal <PCtemp<11>>.
+    Found 1-bit register for signal <PCtemp<10>>.
+    Found 1-bit register for signal <PCtemp<9>>.
+    Found 1-bit register for signal <PCtemp<8>>.
+    Found 1-bit register for signal <PCtemp<7>>.
+    Found 1-bit register for signal <PCtemp<6>>.
+    Found 1-bit register for signal <PCtemp<5>>.
+    Found 1-bit register for signal <PCtemp<4>>.
+    Found 1-bit register for signal <PCtemp<3>>.
+    Found 1-bit register for signal <PCtemp<2>>.
+    Found 1-bit register for signal <PCtemp<1>>.
+    Found 1-bit register for signal <PCtemp<0>>.
+    Found 23-bit adder for signal <PCtemp[23]_GND_8_o_add_0_OUT> created at line 62.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred  24 Multiplexer(s).
+Unit <fetch_ctrl> synthesized.
+
+Synthesizing Unit <alu_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\alu_ctrl.vhd".
+WARNING:Xst:647 - Input <Raddr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <tZ>.
+    Found 1-bit register for signal <tIORW>.
+    Found 1-bit register for signal <carry>.
+    Found 23-bit register for signal <Addr>.
+    Found 9-bit register for signal <aluout9>.
+    Found 8-bit register for signal <ALUOUT>.
+    Found 9-bit adder for signal <n0146> created at line 75.
+    Found 9-bit adder for signal <GND_10_o_GND_10_o_add_3_OUT> created at line 75.
+    Found 9-bit subtractor for signal <GND_10_o_GND_10_o_sub_6_OUT<8:0>> created at line 79.
+    Found 9-bit subtractor for signal <GND_10_o_GND_10_o_sub_7_OUT<8:0>> created at line 79.
+    Found 8-bit 8-to-1 multiplexer for signal <IR[10]_REG[7][7]_wide_mux_0_OUT> created at line 69.
+    Found 8-bit 8-to-1 multiplexer for signal <IR[2]_REG[7][7]_wide_mux_1_OUT> created at line 70.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<7><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<6><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<5><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<4><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<3><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<2><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<1><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <REG<0><0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred  64 Latch(s).
+	inferred   8 Multiplexer(s).
+Unit <alu_ctrl> synthesized.
+
+Synthesizing Unit <stor_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\stor_ctrl.vhd".
+    Found 1-bit register for signal <tW>.
+    Found 1-bit register for signal <tR>.
+    Found 23-bit register for signal <Addrout>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <stor_ctrl> synthesized.
+
+Synthesizing Unit <wrbk_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\wrbk_ctrl.vhd".
+    Found 1-bit register for signal <tPCupdate>.
+    Found 1-bit register for signal <tRupdate>.
+    Found 3-bit register for signal <Raddr>.
+    Found 8-bit register for signal <Rdata>.
+    Found 23-bit register for signal <PCnew>.
+    Found 23-bit adder for signal <PC[23]_PCnewadr[23]_add_4_OUT> created at line 95.
+    Found 32x1-bit Read Only RAM for signal <IR[15]_GND_76_o_Mux_8_o>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <wrbk_ctrl> synthesized.
+
+Synthesizing Unit <memwr_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\memwr_ctrl.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ABUS<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_89_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_90_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_91_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<15>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_93_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<14>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_95_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<13>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_97_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<12>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_99_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<11>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_101_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<10>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRread_RST_DLATCH_103_q>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<9>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<8>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<7>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<6>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<5>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<4>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<3>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<2>> created at line 53
+    Found 1-bit tristate buffer for signal <DBUS<1>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit tristate buffer for signal <DBUS<0>> created at line 53
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IRout<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Rtemp<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <CRE>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  57 Latch(s).
+	inferred  28 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <memwr_ctrl> synthesized.
+
+Synthesizing Unit <io_ctrl>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\io_ctrl.vhd".
+WARNING:Xst:647 - Input <IR<10:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <IODB>.
+    Found 2-bit register for signal <IOAD>.
+    Found 6-bit adder for signal <n0030> created at line 64.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+Unit <io_ctrl> synthesized.
+
+Synthesizing Unit <hex_to_7seg>.
+    Related source file is "G:\hwpractice\cpu_on_nexys_3\hex_to_7seg.vhd".
+    Found 1-bit register for signal <slowclk>.
+    Found 2-bit register for signal <count2>.
+    Found 32-bit register for signal <cnt>.
+    Found 32-bit adder for signal <cnt[31]_GND_159_o_add_0_OUT> created at line 52.
+    Found 2-bit adder for signal <count2[1]_GND_159_o_add_4_OUT> created at line 63.
+    Found 5-bit adder for signal <n0053> created at line 85.
+    Found 3-bit subtractor for signal <n0051[2:0]> created at line 85.
+    Found 4x4-bit Read Only RAM for signal <AN>
+    Found 1-bit 4-to-1 multiplexer for signal <hex<3>> created at line 85.
+    Found 1-bit 4-to-1 multiplexer for signal <hex<2>> created at line 85.
+    Found 1-bit 4-to-1 multiplexer for signal <hex<1>> created at line 85.
+    Found 1-bit 4-to-1 multiplexer for signal <hex<0>> created at line 85.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <seg_ca<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   7 Multiplexer(s).
+Unit <hex_to_7seg> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x1-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 11
+ 2-bit adder                                           : 1
+ 23-bit adder                                          : 2
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 1
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Registers                                            : 48
+ 1-bit register                                        : 35
+ 2-bit register                                        : 2
+ 23-bit register                                       : 4
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 3
+ 9-bit register                                        : 1
+# Latches                                              : 129
+ 1-bit latch                                           : 129
+# Multiplexers                                         : 75
+ 1-bit 2-to-1 multiplexer                              : 59
+ 1-bit 4-to-1 multiplexer                              : 4
+ 23-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+ 8-bit 8-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 5
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <t_0> in Unit <clock_map> is equivalent to the following FF/Latch, which will be removed : <t3> 
+INFO:Xst:2261 - The FF/Latch <t_1> in Unit <clock_map> is equivalent to the following FF/Latch, which will be removed : <t2> 
+INFO:Xst:2261 - The FF/Latch <t_2> in Unit <clock_map> is equivalent to the following FF/Latch, which will be removed : <t1> 
+INFO:Xst:2261 - The FF/Latch <Addr_17> in Unit <alu_map> is equivalent to the following 6 FFs/Latches, which will be removed : <Addr_18> <Addr_19> <Addr_20> <Addr_21> <Addr_22> <Addr_23> 
+INFO:Xst:2261 - The FF/Latch <aluout9_0> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_0> 
+INFO:Xst:2261 - The FF/Latch <aluout9_1> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_1> 
+INFO:Xst:2261 - The FF/Latch <aluout9_2> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_2> 
+INFO:Xst:2261 - The FF/Latch <aluout9_3> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_3> 
+INFO:Xst:2261 - The FF/Latch <aluout9_4> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_4> 
+INFO:Xst:2261 - The FF/Latch <aluout9_5> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_5> 
+INFO:Xst:2261 - The FF/Latch <aluout9_6> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_6> 
+INFO:Xst:2261 - The FF/Latch <aluout9_7> in Unit <alu_map> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_7> 
+WARNING:Xst:1710 - FF/Latch <Addr_17> (without init value) has a constant value of 0 in block <alu_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <CRE> (without init value) has a constant value of 0 in block <memwr_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_17> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_18> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_19> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_20> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_21> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_22> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Addrout_23> (without init value) has a constant value of 0 in block <stor_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <Addr<23:16>> (without init value) have a constant value of 0 in block <alu_ctrl>.
+
+Synthesizing (advanced) Unit <hex_to_7seg>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <count2>: 1 register on signal <count2>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_AN> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count2>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <AN>            |          |
+    -----------------------------------------------------------------------
+Unit <hex_to_7seg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <wrbk_ctrl>.
+INFO:Xst:3231 - The small RAM <Mram_IR[15]_GND_76_o_Mux_8_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <IR<15:11>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <wrbk_ctrl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x1-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 8
+ 2-bit subtractor                                      : 1
+ 23-bit adder                                          : 2
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 6-bit adder                                           : 1
+ 9-bit adder carry in                                  : 1
+ 9-bit subtractor borrow in                            : 1
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 162
+ Flip-Flops                                            : 162
+# Multiplexers                                         : 88
+ 1-bit 2-to-1 multiplexer                              : 58
+ 1-bit 4-to-1 multiplexer                              : 4
+ 1-bit 8-to-1 multiplexer                              : 16
+ 23-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+ 9-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <CRE> (without init value) has a constant value of 0 in block <memwr_ctrl>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <t_0> in Unit <clock_ctrl> is equivalent to the following FF/Latch, which will be removed : <t3> 
+INFO:Xst:2261 - The FF/Latch <t_1> in Unit <clock_ctrl> is equivalent to the following FF/Latch, which will be removed : <t2> 
+INFO:Xst:2261 - The FF/Latch <t_2> in Unit <clock_ctrl> is equivalent to the following FF/Latch, which will be removed : <t1> 
+INFO:Xst:2261 - The FF/Latch <aluout9_0> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_0> 
+INFO:Xst:2261 - The FF/Latch <aluout9_1> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_1> 
+INFO:Xst:2261 - The FF/Latch <aluout9_2> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_2> 
+INFO:Xst:2261 - The FF/Latch <aluout9_3> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_3> 
+INFO:Xst:2261 - The FF/Latch <aluout9_4> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_4> 
+INFO:Xst:2261 - The FF/Latch <aluout9_5> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_5> 
+INFO:Xst:2261 - The FF/Latch <aluout9_6> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_6> 
+INFO:Xst:2261 - The FF/Latch <aluout9_7> in Unit <alu_ctrl> is equivalent to the following FF/Latch, which will be removed : <ALUOUT_7> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    PCtemp_0 in unit <fetch_ctrl>
+    PCtemp_1 in unit <fetch_ctrl>
+    PCtemp_2 in unit <fetch_ctrl>
+    PCtemp_4 in unit <fetch_ctrl>
+    PCtemp_5 in unit <fetch_ctrl>
+    PCtemp_3 in unit <fetch_ctrl>
+    PCtemp_7 in unit <fetch_ctrl>
+    PCtemp_8 in unit <fetch_ctrl>
+    PCtemp_6 in unit <fetch_ctrl>
+    PCtemp_10 in unit <fetch_ctrl>
+    PCtemp_11 in unit <fetch_ctrl>
+    PCtemp_9 in unit <fetch_ctrl>
+    PCtemp_13 in unit <fetch_ctrl>
+    PCtemp_14 in unit <fetch_ctrl>
+    PCtemp_12 in unit <fetch_ctrl>
+    PCtemp_16 in unit <fetch_ctrl>
+    PCtemp_17 in unit <fetch_ctrl>
+    PCtemp_15 in unit <fetch_ctrl>
+    PCtemp_19 in unit <fetch_ctrl>
+    PCtemp_20 in unit <fetch_ctrl>
+    PCtemp_18 in unit <fetch_ctrl>
+    PCtemp_21 in unit <fetch_ctrl>
+    PCtemp_22 in unit <fetch_ctrl>
+
+
+Optimizing unit <cpu> ...
+
+Optimizing unit <io_ctrl> ...
+
+Optimizing unit <fetch_ctrl> ...
+
+Optimizing unit <alu_ctrl> ...
+
+Optimizing unit <hex_to_7seg> ...
+
+Optimizing unit <wrbk_ctrl> ...
+
+Optimizing unit <stor_ctrl> ...
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_23> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_22> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_21> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_20> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_19> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_18> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <stor_map/Addrout_17> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <wrbk_map/Raddr_2> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <wrbk_map/Raddr_1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <wrbk_map/Raddr_0> of sequential type is unconnected in block <cpu>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 6.
+Latch memwr_map/IRread_RST_DLATCH_89_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_91_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_93_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_95_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_97_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_99_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_101_q has been replicated 1 time(s) to handle iob=true attribute.
+Latch memwr_map/IRread_RST_DLATCH_103_q has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 198
+ Flip-Flops                                            : 198
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cpu.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 711
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 84
+#      LUT2                        : 56
+#      LUT3                        : 49
+#      LUT4                        : 92
+#      LUT5                        : 63
+#      LUT6                        : 93
+#      MUXCY                       : 122
+#      MUXF7                       : 17
+#      VCC                         : 1
+#      XORCY                       : 127
+# FlipFlops/Latches                : 357
+#      FD                          : 45
+#      FDC                         : 54
+#      FDE                         : 73
+#      FDP                         : 24
+#      FDR                         : 2
+#      LD                          : 8
+#      LDC                         : 23
+#      LDCE                        : 64
+#      LDE_1                       : 64
+# Clock Buffers                    : 7
+#      BUFG                        : 5
+#      BUFGP                       : 2
+# IO Buffers                       : 129
+#      IBUF                        : 33
+#      IOBUF                       : 16
+#      OBUF                        : 80
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             300  out of  18224     1%  
+ Number of Slice LUTs:                  443  out of   9112     4%  
+    Number used as Logic:               443  out of   9112     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    588
+   Number with an unused Flip Flop:     288  out of    588    48%  
+   Number with an unused LUT:           145  out of    588    24%  
+   Number of fully used LUT-FF pairs:   155  out of    588    26%  
+   Number of unique control sets:        95
+
+IO Utilization: 
+ Number of IOs:                         132
+ Number of bonded IOBs:                 131  out of    232    56%  
+    IOB Flip Flops/Latches:              57
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                7  out of     16    43%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)           | Load  |
+-----------------------------------------------------------------+---------------------------------+-------+
+CLK                                                              | BUFGP                           | 5     |
+RST                                                              | IBUF+BUFG                       | 64    |
+IORW(alu_map/IORW1:O)                                            | NONE(*)(io_map/IOAD_1)          | 10    |
+clock_map/t_2                                                    | BUFG                            | 69    |
+clock_map/t_1                                                    | BUFG                            | 28    |
+Rupdate(wrbk_map/Rupdate1:O)                                     | BUFG(*)(alu_map/REG<0>_0)       | 64    |
+seg_map/slowclk                                                  | NONE(seg_map/count2_1)          | 2     |
+seg_map/t1_GND_160_o_Mux_22_o(seg_map/t1_GND_160_o_Mux_22_o1:O)  | NONE(*)(seg_map/seg_ca_7)       | 8     |
+clock_map/t4                                                     | BUFG                            | 33    |
+clock_map/t_0                                                    | NONE(stor_map/tW)               | 18    |
+sysCLK                                                           | BUFGP                           | 33    |
+fetch_map/RST_GND_8_o_AND_46_o(fetch_map/RST_GND_8_o_AND_46_o1:O)| NONE(*)(fetch_map/PCtemp_0_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_44_o(fetch_map/RST_GND_8_o_AND_44_o1:O)| NONE(*)(fetch_map/PCtemp_1_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_42_o(fetch_map/RST_GND_8_o_AND_42_o1:O)| NONE(*)(fetch_map/PCtemp_2_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_38_o(fetch_map/RST_GND_8_o_AND_38_o1:O)| NONE(*)(fetch_map/PCtemp_4_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_36_o(fetch_map/RST_GND_8_o_AND_36_o1:O)| NONE(*)(fetch_map/PCtemp_5_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_40_o(fetch_map/RST_GND_8_o_AND_40_o1:O)| NONE(*)(fetch_map/PCtemp_3_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_32_o(fetch_map/RST_GND_8_o_AND_32_o1:O)| NONE(*)(fetch_map/PCtemp_7_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_30_o(fetch_map/RST_GND_8_o_AND_30_o1:O)| NONE(*)(fetch_map/PCtemp_8_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_34_o(fetch_map/RST_GND_8_o_AND_34_o1:O)| NONE(*)(fetch_map/PCtemp_6_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_26_o(fetch_map/RST_GND_8_o_AND_26_o1:O)| NONE(*)(fetch_map/PCtemp_10_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_24_o(fetch_map/RST_GND_8_o_AND_24_o1:O)| NONE(*)(fetch_map/PCtemp_11_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_28_o(fetch_map/RST_GND_8_o_AND_28_o1:O)| NONE(*)(fetch_map/PCtemp_9_LDC) | 1     |
+fetch_map/RST_GND_8_o_AND_20_o(fetch_map/RST_GND_8_o_AND_20_o1:O)| NONE(*)(fetch_map/PCtemp_13_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_18_o(fetch_map/RST_GND_8_o_AND_18_o1:O)| NONE(*)(fetch_map/PCtemp_14_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_22_o(fetch_map/RST_GND_8_o_AND_22_o1:O)| NONE(*)(fetch_map/PCtemp_12_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_14_o(fetch_map/RST_GND_8_o_AND_14_o1:O)| NONE(*)(fetch_map/PCtemp_16_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_12_o(fetch_map/RST_GND_8_o_AND_12_o1:O)| NONE(*)(fetch_map/PCtemp_17_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_16_o(fetch_map/RST_GND_8_o_AND_16_o1:O)| NONE(*)(fetch_map/PCtemp_15_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_8_o(fetch_map/RST_GND_8_o_AND_8_o1:O)  | NONE(*)(fetch_map/PCtemp_19_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_6_o(fetch_map/RST_GND_8_o_AND_6_o1:O)  | NONE(*)(fetch_map/PCtemp_20_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_10_o(fetch_map/RST_GND_8_o_AND_10_o1:O)| NONE(*)(fetch_map/PCtemp_18_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_4_o(fetch_map/RST_GND_8_o_AND_4_o1:O)  | NONE(*)(fetch_map/PCtemp_21_LDC)| 1     |
+fetch_map/RST_GND_8_o_AND_2_o(fetch_map/RST_GND_8_o_AND_2_o1:O)  | NONE(*)(fetch_map/PCtemp_22_LDC)| 1     |
+-----------------------------------------------------------------+---------------------------------+-------+
+(*) These 26 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.451ns (Maximum Frequency: 183.447MHz)
+   Minimum input arrival time before clock: 5.505ns
+   Maximum output required time after clock: 5.916ns
+   Maximum combinational path delay: 6.928ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.320ns (frequency: 430.985MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               2.320ns (Levels of Logic = 0)
+  Source:            clock_map/t_2 (FF)
+  Destination:       clock_map/t_1 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: clock_map/t_2 to clock_map/t_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             84   0.447   1.771  clock_map/t_2 (clock_map/t_2)
+     FDC:D                     0.102          clock_map/t_1
+    ----------------------------------------
+    Total                      2.320ns (0.549ns logic, 1.771ns route)
+                                       (23.7% logic, 76.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'IORW'
+  Clock period: 1.405ns (frequency: 711.617MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               1.405ns (Levels of Logic = 1)
+  Source:            io_map/IODB_7 (FF)
+  Destination:       io_map/IODB_7 (FF)
+  Source Clock:      IORW rising
+  Destination Clock: IORW rising
+
+  Data Path: io_map/IODB_7 to io_map/IODB_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.651  io_map/IODB_7 (io_map/IODB_7)
+     LUT5:I4->O            1   0.205   0.000  io_map/PWR_111_o_ALUOUT[7]_select_17_OUT<0> (io_map/PWR_111_o_ALUOUT[7]_select_17_OUT<7>)
+     FD:D                      0.102          io_map/IODB_7
+    ----------------------------------------
+    Total                      1.405ns (0.754ns logic, 0.651ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_map/t_2'
+  Clock period: 3.062ns (frequency: 326.637MHz)
+  Total number of paths / destination ports: 1150 / 69
+-------------------------------------------------------------------------
+Delay:               3.062ns (Levels of Logic = 24)
+  Source:            fetch_map/PCtemp_1_C_1 (FF)
+  Destination:       fetch_map/PCtemp_22_C_22 (FF)
+  Source Clock:      clock_map/t_2 rising
+  Destination Clock: clock_map/t_2 rising
+
+  Data Path: fetch_map/PCtemp_1_C_1 to fetch_map/PCtemp_22_C_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.721  fetch_map/PCtemp_1_C_1 (fetch_map/PCtemp_1_C_1)
+     LUT3:I1->O            3   0.203   0.651  fetch_map/PCtemp_110 (fetch_map/PCtemp_1)
+     LUT1:I0->O            1   0.205   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<1>_rt (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<1>_rt)
+     MUXCY:S->O            1   0.172   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<1> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<2> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<3> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<4> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<5> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<6> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<7> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<8> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<9> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<10> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<11> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<12> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<13> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<14> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<15> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<16> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<17> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<18> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<19> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<20> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<20>)
+     MUXCY:CI->O           0   0.019   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<21> (fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_cy<21>)
+     XORCY:CI->O           2   0.180   0.000  fetch_map/Madd_PCtemp[23]_GND_8_o_add_0_OUT_xor<22> (fetch_map/PCtemp[23]_GND_8_o_add_0_OUT<22>)
+     FDC:D                     0.102          fetch_map/PCtemp_22_C_22
+    ----------------------------------------
+    Total                      3.062ns (1.689ns logic, 1.373ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_map/t_1'
+  Clock period: 5.018ns (frequency: 199.300MHz)
+  Total number of paths / destination ports: 56 / 12
+-------------------------------------------------------------------------
+Delay:               5.018ns (Levels of Logic = 7)
+  Source:            alu_map/carry (FF)
+  Destination:       alu_map/tZ (FF)
+  Source Clock:      clock_map/t_1 rising
+  Destination Clock: clock_map/t_1 rising
+
+  Data Path: alu_map/carry to alu_map/tZ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   0.744  alu_map/carry (alu_map/carry)
+     INV:I->O              1   0.206   0.579  alu_map/carry_inv1_INV_0 (alu_map/carry_inv)
+     MUXCY:CI->O           1   0.019   0.000  alu_map/Msub_GND_10_o_GND_10_o_sub_7_OUT<8:0>_Madd_cy<0> (alu_map/Msub_GND_10_o_GND_10_o_sub_7_OUT<8:0>_Madd_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alu_map/Msub_GND_10_o_GND_10_o_sub_7_OUT<8:0>_Madd_cy<1> (alu_map/Msub_GND_10_o_GND_10_o_sub_7_OUT<8:0>_Madd_cy<1>)
+     XORCY:CI->O           2   0.180   0.845  alu_map/Msub_GND_10_o_GND_10_o_sub_7_OUT<8:0>_Madd_xor<2> (alu_map/GND_10_o_GND_10_o_sub_7_OUT<2>)
+     LUT6:I3->O            1   0.205   0.684  alu_map/Mmux__n015611 (alu_map/Mmux__n01561)
+     LUT6:I4->O            1   0.203   0.580  alu_map/Mmux__n015615 (alu_map/_n0156)
+     LUT6:I5->O            1   0.205   0.000  alu_map/tZ_rstpot (alu_map/tZ_rstpot)
+     FDC:D                     0.102          alu_map/tZ
+    ----------------------------------------
+    Total                      5.018ns (1.586ns logic, 3.432ns route)
+                                       (31.6% logic, 68.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'seg_map/slowclk'
+  Clock period: 2.216ns (frequency: 451.233MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.216ns (Levels of Logic = 1)
+  Source:            seg_map/count2_0 (FF)
+  Destination:       seg_map/count2_0 (FF)
+  Source Clock:      seg_map/slowclk rising
+  Destination Clock: seg_map/slowclk rising
+
+  Data Path: seg_map/count2_0 to seg_map/count2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.447   0.882  seg_map/count2_0 (seg_map/count2_0)
+     INV:I->O              1   0.206   0.579  seg_map/Mcount_count2_xor<0>11_INV_0 (seg_map/Result<0>)
+     FD:D                      0.102          seg_map/count2_0
+    ----------------------------------------
+    Total                      2.216ns (0.755ns logic, 1.461ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_map/t4'
+  Clock period: 4.132ns (frequency: 242.038MHz)
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Delay:               4.132ns (Levels of Logic = 2)
+  Source:            wrbk_map/tPCupdate (FF)
+  Destination:       wrbk_map/Rdata_7 (FF)
+  Source Clock:      clock_map/t4 rising
+  Destination Clock: clock_map/t4 rising
+
+  Data Path: wrbk_map/tPCupdate to wrbk_map/Rdata_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             49   0.447   1.534  wrbk_map/tPCupdate (wrbk_map/tPCupdate)
+     LUT3:I2->O            2   0.205   0.617  fetch_map/PCack1 (PCack)
+     LUT6:I5->O            8   0.205   0.802  wrbk_map/_n0088_inv1 (wrbk_map/_n0088_inv)
+     FDE:CE                    0.322          wrbk_map/Rdata_0
+    ----------------------------------------
+    Total                      4.132ns (1.179ns logic, 2.953ns route)
+                                       (28.5% logic, 71.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sysCLK'
+  Clock period: 5.451ns (frequency: 183.447MHz)
+  Total number of paths / destination ports: 17954 / 33
+-------------------------------------------------------------------------
+Delay:               5.451ns (Levels of Logic = 19)
+  Source:            seg_map/cnt_0 (FF)
+  Destination:       seg_map/cnt_31 (FF)
+  Source Clock:      sysCLK rising
+  Destination Clock: sysCLK rising
+
+  Data Path: seg_map/cnt_0 to seg_map/cnt_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  seg_map/cnt_0 (seg_map/cnt_0)
+     INV:I->O              1   0.206   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0 (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<0> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<1> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<2> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<4> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<5> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<6> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<8> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<9> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<10> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<12> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<13> (seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<13>)
+     XORCY:CI->O           1   0.180   0.944  seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<14> (seg_map/cnt[31]_GND_159_o_add_0_OUT<14>)
+     LUT6:I0->O            3   0.203   0.898  seg_map/GND_159_o_cnt[31]_equal_2_o<31>4 (seg_map/GND_159_o_cnt[31]_equal_2_o<31>3)
+     LUT6:I2->O           17   0.203   1.028  seg_map/GND_159_o_cnt[31]_equal_2_o<31>7 (seg_map/GND_159_o_cnt[31]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  seg_map/cnt_31_rstpot (seg_map/cnt_31_rstpot)
+     FD:D                      0.102          seg_map/cnt_31
+    ----------------------------------------
+    Total                      5.451ns (1.965ns logic, 3.486ns route)
+                                       (36.0% logic, 64.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.661ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       clock_map/t4 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to clock_map/t4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.009  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.430          clock_map/t_0
+    ----------------------------------------
+    Total                      3.661ns (1.652ns logic, 2.009ns route)
+                                       (45.1% logic, 54.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST'
+  Total number of paths / destination ports: 112 / 112
+-------------------------------------------------------------------------
+Offset:              5.505ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       memwr_map/ABUS_1 (LATCH)
+  Destination Clock: RST rising
+
+  Data Path: RST to memwr_map/ABUS_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O           40   0.203   1.405  memwr_map/_n0291<5>11 (memwr_map/_n0291<5>)
+     LDE_1:GE                  0.322          memwr_map/IRread_RST_DLATCH_89_q
+    ----------------------------------------
+    Total                      5.505ns (1.747ns logic, 3.758ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'IORW'
+  Total number of paths / destination ports: 32 / 8
+-------------------------------------------------------------------------
+Offset:              3.241ns (Levels of Logic = 3)
+  Source:            IOin<23> (PAD)
+  Destination:       io_map/IODB_7 (FF)
+  Destination Clock: IORW rising
+
+  Data Path: IOin<23> to io_map/IODB_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.827  IOin_23_IBUF (IOin_23_IBUF)
+     LUT6:I2->O            1   0.203   0.684  io_map/PWR_111_o_ALUOUT[7]_select_17_OUT<0>_SW0 (N14)
+     LUT5:I3->O            1   0.203   0.000  io_map/PWR_111_o_ALUOUT[7]_select_17_OUT<0> (io_map/PWR_111_o_ALUOUT[7]_select_17_OUT<7>)
+     FD:D                      0.102          io_map/IODB_7
+    ----------------------------------------
+    Total                      3.241ns (1.730ns logic, 1.511ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_map/t_2'
+  Total number of paths / destination ports: 46 / 46
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_0_C_0 (FF)
+  Destination Clock: clock_map/t_2 rising
+
+  Data Path: RST to fetch_map/PCtemp_0_C_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_47_o1 (fetch_map/RST_GND_8_o_AND_47_o)
+     FDC:CLR                   0.430          fetch_map/PCtemp_0_C_0
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_map/t_1'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              4.950ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       alu_map/Addr_16 (FF)
+  Destination Clock: clock_map/t_1 rising
+
+  Data Path: RST to alu_map/Addr_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.009  RST_IBUF (RST_IBUF)
+     INV:I->O             25   0.206   1.192  alu_map/RST_inv1_INV_0 (alu_map/RST_inv)
+     FDE:CE                    0.322          alu_map/aluout9_0
+    ----------------------------------------
+    Total                      4.950ns (1.750ns logic, 3.200ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Rupdate'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              3.661ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       alu_map/REG<0>_0 (LATCH)
+  Destination Clock: Rupdate falling
+
+  Data Path: RST to alu_map/REG<0>_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.009  RST_IBUF (RST_IBUF)
+     LDCE:CLR                  0.430          alu_map/REG<7>_5
+    ----------------------------------------
+    Total                      3.661ns (1.652ns logic, 2.009ns route)
+                                       (45.1% logic, 54.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_46_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_0_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_46_o falling
+
+  Data Path: RST to fetch_map/PCtemp_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_47_o1 (fetch_map/RST_GND_8_o_AND_47_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_0_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_44_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_1_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_44_o falling
+
+  Data Path: RST to fetch_map/PCtemp_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_45_o1 (fetch_map/RST_GND_8_o_AND_45_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_1_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_42_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_2_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_42_o falling
+
+  Data Path: RST to fetch_map/PCtemp_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_43_o1 (fetch_map/RST_GND_8_o_AND_43_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_2_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_38_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_4_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_38_o falling
+
+  Data Path: RST to fetch_map/PCtemp_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_39_o1 (fetch_map/RST_GND_8_o_AND_39_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_4_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_36_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_5_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_36_o falling
+
+  Data Path: RST to fetch_map/PCtemp_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_37_o1 (fetch_map/RST_GND_8_o_AND_37_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_5_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_40_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_3_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_40_o falling
+
+  Data Path: RST to fetch_map/PCtemp_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_41_o1 (fetch_map/RST_GND_8_o_AND_41_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_3_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_32_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_7_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_32_o falling
+
+  Data Path: RST to fetch_map/PCtemp_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_33_o1 (fetch_map/RST_GND_8_o_AND_33_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_7_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_30_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_8_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_30_o falling
+
+  Data Path: RST to fetch_map/PCtemp_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_31_o1 (fetch_map/RST_GND_8_o_AND_31_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_8_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_34_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_6_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_34_o falling
+
+  Data Path: RST to fetch_map/PCtemp_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_35_o1 (fetch_map/RST_GND_8_o_AND_35_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_6_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_26_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_10_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_26_o falling
+
+  Data Path: RST to fetch_map/PCtemp_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_27_o1 (fetch_map/RST_GND_8_o_AND_27_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_10_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_24_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_11_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_24_o falling
+
+  Data Path: RST to fetch_map/PCtemp_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_25_o1 (fetch_map/RST_GND_8_o_AND_25_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_11_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_28_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_9_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_28_o falling
+
+  Data Path: RST to fetch_map/PCtemp_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_29_o1 (fetch_map/RST_GND_8_o_AND_29_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_9_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_20_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_13_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_20_o falling
+
+  Data Path: RST to fetch_map/PCtemp_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_21_o1 (fetch_map/RST_GND_8_o_AND_21_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_13_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_18_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_14_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_18_o falling
+
+  Data Path: RST to fetch_map/PCtemp_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_19_o1 (fetch_map/RST_GND_8_o_AND_19_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_14_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_22_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_12_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_22_o falling
+
+  Data Path: RST to fetch_map/PCtemp_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_23_o1 (fetch_map/RST_GND_8_o_AND_23_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_12_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_14_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_16_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_14_o falling
+
+  Data Path: RST to fetch_map/PCtemp_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_15_o1 (fetch_map/RST_GND_8_o_AND_15_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_16_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_12_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_17_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_12_o falling
+
+  Data Path: RST to fetch_map/PCtemp_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_13_o1 (fetch_map/RST_GND_8_o_AND_13_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_17_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_16_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_15_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_16_o falling
+
+  Data Path: RST to fetch_map/PCtemp_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_17_o1 (fetch_map/RST_GND_8_o_AND_17_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_15_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_8_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_19_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_8_o falling
+
+  Data Path: RST to fetch_map/PCtemp_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_9_o1 (fetch_map/RST_GND_8_o_AND_9_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_19_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_6_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_20_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_6_o falling
+
+  Data Path: RST to fetch_map/PCtemp_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_7_o1 (fetch_map/RST_GND_8_o_AND_7_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_20_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_10_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_18_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_10_o falling
+
+  Data Path: RST to fetch_map/PCtemp_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_11_o1 (fetch_map/RST_GND_8_o_AND_11_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_18_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_4_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_21_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_4_o falling
+
+  Data Path: RST to fetch_map/PCtemp_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_5_o1 (fetch_map/RST_GND_8_o_AND_5_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_21_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fetch_map/RST_GND_8_o_AND_2_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.825ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       fetch_map/PCtemp_22_LDC (LATCH)
+  Destination Clock: fetch_map/RST_GND_8_o_AND_2_o falling
+
+  Data Path: RST to fetch_map/PCtemp_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            2   0.203   0.616  fetch_map/RST_GND_8_o_AND_3_o1 (fetch_map/RST_GND_8_o_AND_3_o)
+     LDC:CLR                   0.430          fetch_map/PCtemp_22_LDC
+    ----------------------------------------
+    Total                      4.825ns (1.855ns logic, 2.970ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST'
+  Total number of paths / destination ports: 55 / 39
+-------------------------------------------------------------------------
+Offset:              4.858ns (Levels of Logic = 2)
+  Source:            memwr_map/IRread_RST_DLATCH_90_q (LATCH)
+  Destination:       DBUS<15> (PAD)
+  Source Clock:      RST rising
+
+  Data Path: memwr_map/IRread_RST_DLATCH_90_q to DBUS<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.498   0.579  memwr_map/IRread_RST_DLATCH_90_q (memwr_map/IRread_RST_DLATCH_90_q)
+     INV:I->O             16   0.206   1.004  memwr_map/IRread_RST_DLATCH_90_q_inv1_INV_0 (memwr_map/IRread_RST_DLATCH_90_q_inv)
+     IOBUF:T->IO               2.571          DBUS_15_IOBUF (DBUS<15>)
+    ----------------------------------------
+    Total                      4.858ns (3.275ns logic, 1.583ns route)
+                                       (67.4% logic, 32.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'IORW'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            io_map/IODB_7 (FF)
+  Destination:       IODB<7> (PAD)
+  Source Clock:      IORW rising
+
+  Data Path: io_map/IODB_7 to IODB<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  io_map/IODB_7 (io_map/IODB_7)
+     OBUF:I->O                 2.571          IODB_7_OBUF (IODB<7>)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_2_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_22_LDC (LATCH)
+  Destination:       PCwatch<23> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_2_o falling
+
+  Data Path: fetch_map/PCtemp_22_LDC to PCwatch<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_22_LDC (fetch_map/PCtemp_22_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_221 (fetch_map/PCtemp_22)
+     OBUF:I->O                 2.571          PCwatch_23_OBUF (PCwatch<23>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_map/t_2'
+  Total number of paths / destination ports: 46 / 23
+-------------------------------------------------------------------------
+Offset:              4.593ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_22_C_22 (FF)
+  Destination:       PCwatch<23> (PAD)
+  Source Clock:      clock_map/t_2 rising
+
+  Data Path: fetch_map/PCtemp_22_C_22 to PCwatch<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.721  fetch_map/PCtemp_22_C_22 (fetch_map/PCtemp_22_C_22)
+     LUT3:I1->O            3   0.203   0.650  fetch_map/PCtemp_221 (fetch_map/PCtemp_22)
+     OBUF:I->O                 2.571          PCwatch_23_OBUF (PCwatch<23>)
+    ----------------------------------------
+    Total                      4.593ns (3.221ns logic, 1.372ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_4_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_21_LDC (LATCH)
+  Destination:       PCwatch<22> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_4_o falling
+
+  Data Path: fetch_map/PCtemp_21_LDC to PCwatch<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_21_LDC (fetch_map/PCtemp_21_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_211 (fetch_map/PCtemp_21)
+     OBUF:I->O                 2.571          PCwatch_22_OBUF (PCwatch<22>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_6_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_20_LDC (LATCH)
+  Destination:       PCwatch<21> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_6_o falling
+
+  Data Path: fetch_map/PCtemp_20_LDC to PCwatch<21>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_20_LDC (fetch_map/PCtemp_20_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_201 (fetch_map/PCtemp_20)
+     OBUF:I->O                 2.571          PCwatch_21_OBUF (PCwatch<21>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_8_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_19_LDC (LATCH)
+  Destination:       PCwatch<20> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_8_o falling
+
+  Data Path: fetch_map/PCtemp_19_LDC to PCwatch<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_19_LDC (fetch_map/PCtemp_19_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_191 (fetch_map/PCtemp_19)
+     OBUF:I->O                 2.571          PCwatch_20_OBUF (PCwatch<20>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_10_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_18_LDC (LATCH)
+  Destination:       PCwatch<19> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_10_o falling
+
+  Data Path: fetch_map/PCtemp_18_LDC to PCwatch<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_18_LDC (fetch_map/PCtemp_18_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_181 (fetch_map/PCtemp_18)
+     OBUF:I->O                 2.571          PCwatch_19_OBUF (PCwatch<19>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_12_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_17_LDC (LATCH)
+  Destination:       PCwatch<18> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_12_o falling
+
+  Data Path: fetch_map/PCtemp_17_LDC to PCwatch<18>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_17_LDC (fetch_map/PCtemp_17_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_171 (fetch_map/PCtemp_17)
+     OBUF:I->O                 2.571          PCwatch_18_OBUF (PCwatch<18>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_14_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_16_LDC (LATCH)
+  Destination:       PCwatch<17> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_14_o falling
+
+  Data Path: fetch_map/PCtemp_16_LDC to PCwatch<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_16_LDC (fetch_map/PCtemp_16_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_161 (fetch_map/PCtemp_16)
+     OBUF:I->O                 2.571          PCwatch_17_OBUF (PCwatch<17>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_16_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_15_LDC (LATCH)
+  Destination:       PCwatch<16> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_16_o falling
+
+  Data Path: fetch_map/PCtemp_15_LDC to PCwatch<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_15_LDC (fetch_map/PCtemp_15_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_151 (fetch_map/PCtemp_15)
+     OBUF:I->O                 2.571          PCwatch_16_OBUF (PCwatch<16>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_18_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_14_LDC (LATCH)
+  Destination:       PCwatch<15> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_18_o falling
+
+  Data Path: fetch_map/PCtemp_14_LDC to PCwatch<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_14_LDC (fetch_map/PCtemp_14_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_141 (fetch_map/PCtemp_14)
+     OBUF:I->O                 2.571          PCwatch_15_OBUF (PCwatch<15>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_20_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_13_LDC (LATCH)
+  Destination:       PCwatch<14> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_20_o falling
+
+  Data Path: fetch_map/PCtemp_13_LDC to PCwatch<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_13_LDC (fetch_map/PCtemp_13_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_131 (fetch_map/PCtemp_13)
+     OBUF:I->O                 2.571          PCwatch_14_OBUF (PCwatch<14>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_22_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_12_LDC (LATCH)
+  Destination:       PCwatch<13> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_22_o falling
+
+  Data Path: fetch_map/PCtemp_12_LDC to PCwatch<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_12_LDC (fetch_map/PCtemp_12_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_121 (fetch_map/PCtemp_12)
+     OBUF:I->O                 2.571          PCwatch_13_OBUF (PCwatch<13>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_24_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_11_LDC (LATCH)
+  Destination:       PCwatch<12> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_24_o falling
+
+  Data Path: fetch_map/PCtemp_11_LDC to PCwatch<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_11_LDC (fetch_map/PCtemp_11_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_111 (fetch_map/PCtemp_11)
+     OBUF:I->O                 2.571          PCwatch_12_OBUF (PCwatch<12>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_26_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_10_LDC (LATCH)
+  Destination:       PCwatch<11> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_26_o falling
+
+  Data Path: fetch_map/PCtemp_10_LDC to PCwatch<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_10_LDC (fetch_map/PCtemp_10_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_101 (fetch_map/PCtemp_10)
+     OBUF:I->O                 2.571          PCwatch_11_OBUF (PCwatch<11>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_28_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_9_LDC (LATCH)
+  Destination:       PCwatch<10> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_28_o falling
+
+  Data Path: fetch_map/PCtemp_9_LDC to PCwatch<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_9_LDC (fetch_map/PCtemp_9_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_91 (fetch_map/PCtemp_9)
+     OBUF:I->O                 2.571          PCwatch_10_OBUF (PCwatch<10>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_30_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_8_LDC (LATCH)
+  Destination:       PCwatch<9> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_30_o falling
+
+  Data Path: fetch_map/PCtemp_8_LDC to PCwatch<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_8_LDC (fetch_map/PCtemp_8_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_81 (fetch_map/PCtemp_8)
+     OBUF:I->O                 2.571          PCwatch_9_OBUF (PCwatch<9>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_32_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_7_LDC (LATCH)
+  Destination:       PCwatch<8> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_32_o falling
+
+  Data Path: fetch_map/PCtemp_7_LDC to PCwatch<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_7_LDC (fetch_map/PCtemp_7_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_71 (fetch_map/PCtemp_7)
+     OBUF:I->O                 2.571          PCwatch_8_OBUF (PCwatch<8>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_34_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_6_LDC (LATCH)
+  Destination:       PCwatch<7> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_34_o falling
+
+  Data Path: fetch_map/PCtemp_6_LDC to PCwatch<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_6_LDC (fetch_map/PCtemp_6_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_61 (fetch_map/PCtemp_6)
+     OBUF:I->O                 2.571          PCwatch_7_OBUF (PCwatch<7>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_36_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_5_LDC (LATCH)
+  Destination:       PCwatch<6> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_36_o falling
+
+  Data Path: fetch_map/PCtemp_5_LDC to PCwatch<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_5_LDC (fetch_map/PCtemp_5_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_51 (fetch_map/PCtemp_5)
+     OBUF:I->O                 2.571          PCwatch_6_OBUF (PCwatch<6>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_38_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_4_LDC (LATCH)
+  Destination:       PCwatch<5> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_38_o falling
+
+  Data Path: fetch_map/PCtemp_4_LDC to PCwatch<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_4_LDC (fetch_map/PCtemp_4_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_41 (fetch_map/PCtemp_4)
+     OBUF:I->O                 2.571          PCwatch_5_OBUF (PCwatch<5>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_40_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_3_LDC (LATCH)
+  Destination:       PCwatch<4> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_40_o falling
+
+  Data Path: fetch_map/PCtemp_3_LDC to PCwatch<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_3_LDC (fetch_map/PCtemp_3_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_31 (fetch_map/PCtemp_3)
+     OBUF:I->O                 2.571          PCwatch_4_OBUF (PCwatch<4>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_42_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_2_LDC (LATCH)
+  Destination:       PCwatch<3> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_42_o falling
+
+  Data Path: fetch_map/PCtemp_2_LDC to PCwatch<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_2_LDC (fetch_map/PCtemp_2_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_23 (fetch_map/PCtemp_2)
+     OBUF:I->O                 2.571          PCwatch_3_OBUF (PCwatch<3>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_44_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_1_LDC (LATCH)
+  Destination:       PCwatch<2> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_44_o falling
+
+  Data Path: fetch_map/PCtemp_1_LDC to PCwatch<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.498   0.845  fetch_map/PCtemp_1_LDC (fetch_map/PCtemp_1_LDC)
+     LUT3:I0->O            3   0.205   0.650  fetch_map/PCtemp_110 (fetch_map/PCtemp_1)
+     OBUF:I->O                 2.571          PCwatch_2_OBUF (PCwatch<2>)
+    ----------------------------------------
+    Total                      4.769ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fetch_map/RST_GND_8_o_AND_46_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.770ns (Levels of Logic = 2)
+  Source:            fetch_map/PCtemp_0_LDC (LATCH)
+  Destination:       PCwatch<1> (PAD)
+  Source Clock:      fetch_map/RST_GND_8_o_AND_46_o falling
+
+  Data Path: fetch_map/PCtemp_0_LDC to PCwatch<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.498   0.879  fetch_map/PCtemp_0_LDC (fetch_map/PCtemp_0_LDC)
+     LUT3:I0->O            2   0.205   0.616  fetch_map/PCtemp_01 (fetch_map/PCtemp_0)
+     OBUF:I->O                 2.571          PCwatch_1_OBUF (PCwatch<1>)
+    ----------------------------------------
+    Total                      4.770ns (3.274ns logic, 1.496ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'seg_map/slowclk'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              4.787ns (Levels of Logic = 2)
+  Source:            seg_map/count2_0 (FF)
+  Destination:       SEG_AN<2> (PAD)
+  Source Clock:      seg_map/slowclk rising
+
+  Data Path: seg_map/count2_0 to SEG_AN<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.447   0.987  seg_map/count2_0 (seg_map/count2_0)
+     LUT2:I0->O            1   0.203   0.579  seg_map/Mram_AN21 (SEG_AN_2_OBUF)
+     OBUF:I->O                 2.571          SEG_AN_2_OBUF (SEG_AN<2>)
+    ----------------------------------------
+    Total                      4.787ns (3.221ns logic, 1.566ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'seg_map/t1_GND_160_o_Mux_22_o'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            seg_map/seg_ca_7 (LATCH)
+  Destination:       SEG_CA<7> (PAD)
+  Source Clock:      seg_map/t1_GND_160_o_Mux_22_o falling
+
+  Data Path: seg_map/seg_ca_7 to SEG_CA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  seg_map/seg_ca_7 (seg_map/seg_ca_7)
+     OBUF:I->O                 2.571          SEG_CA_7_OBUF (SEG_CA<7>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Offset:              5.916ns (Levels of Logic = 2)
+  Source:            clock_map/t_2 (FF)
+  Destination:       nMREQ (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: clock_map/t_2 to nMREQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             84   0.447   2.116  clock_map/t_2 (clock_map/t_2)
+     LUT5:I0->O            1   0.203   0.579  memwr_map/Mmux_nCE11 (nMREQ_OBUF)
+     OBUF:I->O                 2.571          nMREQ_OBUF (nMREQ)
+    ----------------------------------------
+    Total                      5.916ns (3.221ns logic, 2.695ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_map/t_0'
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Offset:              4.914ns (Levels of Logic = 2)
+  Source:            stor_map/tR (FF)
+  Destination:       nBHE (PAD)
+  Source Clock:      clock_map/t_0 rising
+
+  Data Path: stor_map/tR to nBHE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.077  stor_map/tR (stor_map/tR)
+     LUT5:I1->O            2   0.203   0.616  FlashCE1 (FlashCE_OBUF)
+     OBUF:I->O                 2.571          nBHE_OBUF (nBHE)
+    ----------------------------------------
+    Total                      4.914ns (3.221ns logic, 1.693ns route)
+                                       (65.5% logic, 34.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_map/t_1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.762ns (Levels of Logic = 1)
+  Source:            alu_map/carry (FF)
+  Destination:       Cy (PAD)
+  Source Clock:      clock_map/t_1 rising
+
+  Data Path: alu_map/carry to Cy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   0.744  alu_map/carry (alu_map/carry)
+     OBUF:I->O                 2.571          Cy_OBUF (Cy)
+    ----------------------------------------
+    Total                      3.762ns (3.018ns logic, 0.744ns route)
+                                       (80.2% logic, 19.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Delay:               6.928ns (Levels of Logic = 3)
+  Source:            RST (PAD)
+  Destination:       nWR (PAD)
+
+  Data Path: RST to nWR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           151   1.222   2.354  RST_IBUF (RST_IBUF)
+     LUT5:I0->O            1   0.203   0.579  memwr_map/Mmux_nWE11 (nWR_OBUF)
+     OBUF:I->O                 2.571          nWR_OBUF (nWR)
+    ----------------------------------------
+    Total                      6.928ns (3.996ns logic, 2.932ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.320|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IORW
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IORW           |    1.405|         |         |         |
+RST            |    4.073|         |         |         |
+clock_map/t_1  |    1.714|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RST
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.396|         |         |         |
+clock_map/t_0  |    3.437|         |         |         |
+clock_map/t_1  |    1.198|         |         |         |
+clock_map/t_2  |    1.269|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Rupdate
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RST            |         |         |    3.247|         |
+clock_map/t4   |         |         |    1.286|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_map/t4
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+CLK                           |    4.472|         |         |         |
+IORW                          |    1.405|         |         |         |
+RST                           |    6.056|         |         |         |
+clock_map/t4                  |    4.132|         |         |         |
+clock_map/t_1                 |    4.074|         |         |         |
+clock_map/t_2                 |    3.860|         |         |         |
+fetch_map/RST_GND_8_o_AND_10_o|         |    3.695|         |         |
+fetch_map/RST_GND_8_o_AND_12_o|         |    3.714|         |         |
+fetch_map/RST_GND_8_o_AND_14_o|         |    3.733|         |         |
+fetch_map/RST_GND_8_o_AND_16_o|         |    3.752|         |         |
+fetch_map/RST_GND_8_o_AND_18_o|         |    3.771|         |         |
+fetch_map/RST_GND_8_o_AND_20_o|         |    3.790|         |         |
+fetch_map/RST_GND_8_o_AND_22_o|         |    3.809|         |         |
+fetch_map/RST_GND_8_o_AND_24_o|         |    3.828|         |         |
+fetch_map/RST_GND_8_o_AND_26_o|         |    3.847|         |         |
+fetch_map/RST_GND_8_o_AND_28_o|         |    3.866|         |         |
+fetch_map/RST_GND_8_o_AND_2_o |         |    2.816|         |         |
+fetch_map/RST_GND_8_o_AND_30_o|         |    3.885|         |         |
+fetch_map/RST_GND_8_o_AND_32_o|         |    3.904|         |         |
+fetch_map/RST_GND_8_o_AND_34_o|         |    3.923|         |         |
+fetch_map/RST_GND_8_o_AND_36_o|         |    3.942|         |         |
+fetch_map/RST_GND_8_o_AND_38_o|         |    3.961|         |         |
+fetch_map/RST_GND_8_o_AND_40_o|         |    3.980|         |         |
+fetch_map/RST_GND_8_o_AND_42_o|         |    3.999|         |         |
+fetch_map/RST_GND_8_o_AND_44_o|         |    4.018|         |         |
+fetch_map/RST_GND_8_o_AND_46_o|         |    4.037|         |         |
+fetch_map/RST_GND_8_o_AND_4_o |         |    3.638|         |         |
+fetch_map/RST_GND_8_o_AND_6_o |         |    3.657|         |         |
+fetch_map/RST_GND_8_o_AND_8_o |         |    3.676|         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_map/t_0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RST            |    3.930|         |         |         |
+clock_map/t_1  |    1.165|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_map/t_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RST            |    7.266|         |         |         |
+Rupdate        |         |    6.591|         |         |
+clock_map/t_1  |    5.018|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_map/t_2
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+CLK                           |    3.699|         |         |         |
+clock_map/t4                  |    3.477|         |         |         |
+clock_map/t_2                 |    3.062|         |         |         |
+fetch_map/RST_GND_8_o_AND_10_o|         |    2.916|         |         |
+fetch_map/RST_GND_8_o_AND_12_o|         |    2.935|         |         |
+fetch_map/RST_GND_8_o_AND_14_o|         |    2.954|         |         |
+fetch_map/RST_GND_8_o_AND_16_o|         |    2.973|         |         |
+fetch_map/RST_GND_8_o_AND_18_o|         |    2.992|         |         |
+fetch_map/RST_GND_8_o_AND_20_o|         |    3.011|         |         |
+fetch_map/RST_GND_8_o_AND_22_o|         |    3.030|         |         |
+fetch_map/RST_GND_8_o_AND_24_o|         |    3.049|         |         |
+fetch_map/RST_GND_8_o_AND_26_o|         |    3.068|         |         |
+fetch_map/RST_GND_8_o_AND_28_o|         |    3.087|         |         |
+fetch_map/RST_GND_8_o_AND_2_o |         |    2.642|         |         |
+fetch_map/RST_GND_8_o_AND_30_o|         |    3.106|         |         |
+fetch_map/RST_GND_8_o_AND_32_o|         |    3.125|         |         |
+fetch_map/RST_GND_8_o_AND_34_o|         |    3.144|         |         |
+fetch_map/RST_GND_8_o_AND_36_o|         |    3.163|         |         |
+fetch_map/RST_GND_8_o_AND_38_o|         |    3.182|         |         |
+fetch_map/RST_GND_8_o_AND_40_o|         |    3.201|         |         |
+fetch_map/RST_GND_8_o_AND_42_o|         |    3.220|         |         |
+fetch_map/RST_GND_8_o_AND_44_o|         |    3.239|         |         |
+fetch_map/RST_GND_8_o_AND_46_o|         |    2.435|         |         |
+fetch_map/RST_GND_8_o_AND_4_o |         |    2.859|         |         |
+fetch_map/RST_GND_8_o_AND_6_o |         |    2.878|         |         |
+fetch_map/RST_GND_8_o_AND_8_o |         |    2.897|         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_10_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_12_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_14_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_16_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_18_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_20_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_22_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_24_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_26_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_28_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_2_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_30_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_32_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_34_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_36_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_38_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_40_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_42_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_44_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_46_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_4_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_6_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fetch_map/RST_GND_8_o_AND_8_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    3.573|         |
+clock_map/t4   |         |         |    3.460|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock seg_map/slowclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+seg_map/slowclk|    2.216|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock seg_map/t1_GND_160_o_Mux_22_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |         |         |    2.803|         |
+RST            |         |         |    3.677|         |
+seg_map/slowclk|         |         |    3.158|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sysCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sysCLK         |    5.451|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.90 secs
+ 
+--> 
+
+Total memory usage is 238236 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  161 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
+

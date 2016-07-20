@@ -1,0 +1,882 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf cpu.ucf
+
+Design file:              cpu.ncd
+Physical constraint file: cpu.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 17954 paths analyzed, 67 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.709ns.
+--------------------------------------------------------------------------------
+
+Paths for end point seg_map/cnt_30 (SLICE_X5Y20.D3), 528 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.291ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_30 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.652ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.022ns (0.368 - 0.390)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.DMUX     Tcind                 0.302   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.C4       net (fanout=2)        0.821   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+    SLICE_X8Y16.C        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>3_SW0
+    SLICE_X8Y16.A1       net (fanout=2)        0.455   N52
+    SLICE_X8Y16.A        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y20.D3       net (fanout=17)       1.268   seg_map/GND_159_o_cnt[31]_equal_2_o
+    SLICE_X5Y20.CLK      Tas                   0.322   seg_map/cnt<30>
+                                                       seg_map/cnt_30_rstpot
+                                                       seg_map/cnt_30
+    -------------------------------------------------  ---------------------------
+    Total                                      5.652ns (2.260ns logic, 3.392ns route)
+                                                       (40.0% logic, 60.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.308ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_30 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.635ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.022ns (0.368 - 0.390)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.BMUX     Tcinb                 0.292   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X7Y16.A2       net (fanout=1)        0.632   seg_map/cnt[31]_GND_159_o_add_0_OUT<17>
+    SLICE_X7Y16.A        Tilo                  0.259   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>4
+    SLICE_X8Y16.A2       net (fanout=3)        0.820   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+    SLICE_X8Y16.A        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y20.D3       net (fanout=17)       1.268   seg_map/GND_159_o_cnt[31]_equal_2_o
+    SLICE_X5Y20.CLK      Tas                   0.322   seg_map/cnt<30>
+                                                       seg_map/cnt_30_rstpot
+                                                       seg_map/cnt_30
+    -------------------------------------------------  ---------------------------
+    Total                                      5.635ns (2.076ns logic, 3.559ns route)
+                                                       (36.8% logic, 63.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.316ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_30 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.627ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.022ns (0.368 - 0.390)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.AMUX     Tcina                 0.202   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.D1       net (fanout=1)        1.077   seg_map/cnt[31]_GND_159_o_add_0_OUT<28>
+    SLICE_X8Y16.D        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>1
+    SLICE_X8Y16.A5       net (fanout=3)        0.274   seg_map/GND_159_o_cnt[31]_equal_2_o<31>
+    SLICE_X8Y16.A        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y20.D3       net (fanout=17)       1.268   seg_map/GND_159_o_cnt[31]_equal_2_o
+    SLICE_X5Y20.CLK      Tas                   0.322   seg_map/cnt<30>
+                                                       seg_map/cnt_30_rstpot
+                                                       seg_map/cnt_30
+    -------------------------------------------------  ---------------------------
+    Total                                      5.627ns (2.160ns logic, 3.467ns route)
+                                                       (38.4% logic, 61.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point seg_map/cnt_29 (SLICE_X5Y20.C3), 528 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.317ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.626ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.022ns (0.368 - 0.390)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.DMUX     Tcind                 0.302   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.C4       net (fanout=2)        0.821   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+    SLICE_X8Y16.C        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>3_SW0
+    SLICE_X8Y16.A1       net (fanout=2)        0.455   N52
+    SLICE_X8Y16.A        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y20.C3       net (fanout=17)       1.242   seg_map/GND_159_o_cnt[31]_equal_2_o
+    SLICE_X5Y20.CLK      Tas                   0.322   seg_map/cnt<30>
+                                                       seg_map/cnt_29_rstpot
+                                                       seg_map/cnt_29
+    -------------------------------------------------  ---------------------------
+    Total                                      5.626ns (2.260ns logic, 3.366ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.334ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.609ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.022ns (0.368 - 0.390)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.BMUX     Tcinb                 0.292   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X7Y16.A2       net (fanout=1)        0.632   seg_map/cnt[31]_GND_159_o_add_0_OUT<17>
+    SLICE_X7Y16.A        Tilo                  0.259   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>4
+    SLICE_X8Y16.A2       net (fanout=3)        0.820   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+    SLICE_X8Y16.A        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y20.C3       net (fanout=17)       1.242   seg_map/GND_159_o_cnt[31]_equal_2_o
+    SLICE_X5Y20.CLK      Tas                   0.322   seg_map/cnt<30>
+                                                       seg_map/cnt_29_rstpot
+                                                       seg_map/cnt_29
+    -------------------------------------------------  ---------------------------
+    Total                                      5.609ns (2.076ns logic, 3.533ns route)
+                                                       (37.0% logic, 63.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.342ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.601ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.022ns (0.368 - 0.390)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.AMUX     Tcina                 0.202   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.D1       net (fanout=1)        1.077   seg_map/cnt[31]_GND_159_o_add_0_OUT<28>
+    SLICE_X8Y16.D        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>1
+    SLICE_X8Y16.A5       net (fanout=3)        0.274   seg_map/GND_159_o_cnt[31]_equal_2_o<31>
+    SLICE_X8Y16.A        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y20.C3       net (fanout=17)       1.242   seg_map/GND_159_o_cnt[31]_equal_2_o
+    SLICE_X5Y20.CLK      Tas                   0.322   seg_map/cnt<30>
+                                                       seg_map/cnt_29_rstpot
+                                                       seg_map/cnt_29
+    -------------------------------------------------  ---------------------------
+    Total                                      5.601ns (2.160ns logic, 3.441ns route)
+                                                       (38.6% logic, 61.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point seg_map/cnt_1 (SLICE_X5Y13.B4), 528 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     4.352ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.613ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.AMUX     Tcina                 0.202   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.D1       net (fanout=1)        1.077   seg_map/cnt[31]_GND_159_o_add_0_OUT<28>
+    SLICE_X8Y16.D        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>1
+    SLICE_X5Y16.C6       net (fanout=3)        0.584   seg_map/GND_159_o_cnt[31]_equal_2_o<31>
+    SLICE_X5Y16.C        Tilo                  0.259   seg_map/cnt<14>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7_1
+    SLICE_X5Y13.B4       net (fanout=15)       0.890   seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y13.CLK      Tas                   0.322   seg_map/cnt<3>
+                                                       seg_map/cnt_1_rstpot
+                                                       seg_map/cnt_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.613ns (2.214ns logic, 3.399ns route)
+                                                       (39.4% logic, 60.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.421ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_4 (FF)
+  Destination:          seg_map/cnt_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.534ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.010ns (0.153 - 0.163)
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_4 to seg_map/cnt_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y14.AQ       Tcko                  0.391   seg_map/cnt<7>
+                                                       seg_map/cnt_4
+    SLICE_X6Y13.A1       net (fanout=2)        0.827   seg_map/cnt<4>
+    SLICE_X6Y13.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/cnt<4>_rt.1
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.AMUX     Tcina                 0.202   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.D1       net (fanout=1)        1.077   seg_map/cnt[31]_GND_159_o_add_0_OUT<28>
+    SLICE_X8Y16.D        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>1
+    SLICE_X5Y16.C6       net (fanout=3)        0.584   seg_map/GND_159_o_cnt[31]_equal_2_o<31>
+    SLICE_X5Y16.C        Tilo                  0.259   seg_map/cnt<14>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7_1
+    SLICE_X5Y13.B4       net (fanout=15)       0.890   seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y13.CLK      Tas                   0.322   seg_map/cnt<3>
+                                                       seg_map/cnt_1_rstpot
+                                                       seg_map/cnt_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.534ns (2.138ns logic, 3.396ns route)
+                                                       (38.6% logic, 61.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.461ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               seg_map/cnt_0 (FF)
+  Destination:          seg_map/cnt_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      5.504ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 0.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: seg_map/cnt_0 to seg_map/cnt_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y13.AQ       Tcko                  0.391   seg_map/cnt<3>
+                                                       seg_map/cnt_0
+    SLICE_X6Y12.A1       net (fanout=2)        0.827   seg_map/cnt<0>
+    SLICE_X6Y12.COUT     Topcya                0.379   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_lut<0>_INV_0
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<3>
+    SLICE_X6Y13.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<7>
+    SLICE_X6Y14.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X6Y17.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<23>
+    SLICE_X6Y18.COUT     Tbyp                  0.076   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.CIN      net (fanout=1)        0.003   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<27>
+    SLICE_X6Y19.DMUX     Tcind                 0.302   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_xor<31>
+    SLICE_X8Y16.C4       net (fanout=2)        0.821   seg_map/cnt[31]_GND_159_o_add_0_OUT<31>
+    SLICE_X8Y16.C        Tilo                  0.205   seg_map/cnt<31>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>3_SW0
+    SLICE_X5Y16.C5       net (fanout=2)        0.631   N52
+    SLICE_X5Y16.C        Tilo                  0.259   seg_map/cnt<14>
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>7_1
+    SLICE_X5Y13.B4       net (fanout=15)       0.890   seg_map/GND_159_o_cnt[31]_equal_2_o<31>7
+    SLICE_X5Y13.CLK      Tas                   0.322   seg_map/cnt<3>
+                                                       seg_map/cnt_1_rstpot
+                                                       seg_map/cnt_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.504ns (2.314ns logic, 3.190ns route)
+                                                       (42.0% logic, 58.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point seg_map/slowclk (SLICE_X7Y15.B2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.679ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/slowclk (FF)
+  Destination:          seg_map/slowclk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.679ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/slowclk to seg_map/slowclk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.BMUX     Tshcko                0.244   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk
+    SLICE_X7Y15.B2       net (fanout=4)        0.280   seg_map/slowclk
+    SLICE_X7Y15.CLK      Tah         (-Th)    -0.155   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot1
+                                                       seg_map/slowclk
+    -------------------------------------------------  ---------------------------
+    Total                                      0.679ns (0.399ns logic, 0.280ns route)
+                                                       (58.8% logic, 41.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point seg_map/slowclk (SLICE_X7Y15.B5), 483 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.919ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/slowclk (FF)
+  Destination:          seg_map/slowclk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.919ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/slowclk to seg_map/slowclk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y15.BMUX     Tshcko                0.244   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk
+    SLICE_X7Y15.A3       net (fanout=4)        0.175   seg_map/slowclk
+    SLICE_X7Y15.A        Tilo                  0.156   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot_G
+    SLICE_X7Y15.B5       net (fanout=1)        0.189   N61
+    SLICE_X7Y15.CLK      Tah         (-Th)    -0.155   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot1
+                                                       seg_map/slowclk
+    -------------------------------------------------  ---------------------------
+    Total                                      0.919ns (0.555ns logic, 0.364ns route)
+                                                       (60.4% logic, 39.6% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      1.653ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/cnt_17 (FF)
+  Destination:          seg_map/slowclk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.655ns (Levels of Logic = 4)
+  Clock Path Skew:      0.002ns (0.152 - 0.150)
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/cnt_17 to seg_map/slowclk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y17.CQ       Tcko                  0.198   seg_map/cnt<18>
+                                                       seg_map/cnt_17
+    SLICE_X6Y16.B4       net (fanout=2)        0.252   seg_map/cnt<17>
+    SLICE_X6Y16.CMUX     Topbc                 0.324   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/cnt<17>_rt.1
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X7Y16.A6       net (fanout=1)        0.020   seg_map/cnt[31]_GND_159_o_add_0_OUT<18>
+    SLICE_X7Y16.A        Tilo                  0.156   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>4
+    SLICE_X7Y15.A4       net (fanout=3)        0.205   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+    SLICE_X7Y15.A        Tilo                  0.156   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot_G
+    SLICE_X7Y15.B5       net (fanout=1)        0.189   N61
+    SLICE_X7Y15.CLK      Tah         (-Th)    -0.155   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot1
+                                                       seg_map/slowclk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.655ns (0.989ns logic, 0.666ns route)
+                                                       (59.8% logic, 40.2% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      1.662ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/cnt_10 (FF)
+  Destination:          seg_map/slowclk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.662ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/cnt_10 to seg_map/slowclk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y15.CQ       Tcko                  0.198   seg_map/cnt<11>
+                                                       seg_map/cnt_10
+    SLICE_X6Y14.C5       net (fanout=2)        0.197   seg_map/cnt<10>
+    SLICE_X6Y14.COUT     Topcyc                0.203   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+                                                       seg_map/cnt<10>_rt.1
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.CIN      net (fanout=1)        0.001   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<11>
+    SLICE_X6Y15.COUT     Tbyp                  0.032   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CIN      net (fanout=1)        0.001   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<15>
+    SLICE_X6Y16.CMUX     Tcinc                 0.149   seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+                                                       seg_map/Madd_cnt[31]_GND_159_o_add_0_OUT_cy<19>
+    SLICE_X7Y16.A6       net (fanout=1)        0.020   seg_map/cnt[31]_GND_159_o_add_0_OUT<18>
+    SLICE_X7Y16.A        Tilo                  0.156   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+                                                       seg_map/GND_159_o_cnt[31]_equal_2_o<31>4
+    SLICE_X7Y15.A4       net (fanout=3)        0.205   seg_map/GND_159_o_cnt[31]_equal_2_o<31>3
+    SLICE_X7Y15.A        Tilo                  0.156   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot_G
+    SLICE_X7Y15.B5       net (fanout=1)        0.189   N61
+    SLICE_X7Y15.CLK      Tah         (-Th)    -0.155   seg_map/GND_159_o_cnt[31]_equal_2_o<31>5
+                                                       seg_map/slowclk_rstpot1
+                                                       seg_map/slowclk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.662ns (1.049ns logic, 0.613ns route)
+                                                       (63.1% logic, 36.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point seg_map/cnt_17 (SLICE_X5Y17.C1), 18 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.979ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/cnt_16 (FF)
+  Destination:          seg_map/cnt_17 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.979ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/cnt_16 to seg_map/cnt_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y17.BQ       Tcko                  0.198   seg_map/cnt<18>
+                                                       seg_map/cnt_16
+    SLICE_X4Y17.A5       net (fanout=2)        0.053   seg_map/cnt<16>
+    SLICE_X4Y17.BMUX     Topab                 0.267   seg_map/Mcount_cnt_cy<19>
+                                                       seg_map/cnt<16>_rt
+                                                       seg_map/Mcount_cnt_cy<19>
+    SLICE_X5Y17.C1       net (fanout=1)        0.246   seg_map/Result<17>
+    SLICE_X5Y17.CLK      Tah         (-Th)    -0.215   seg_map/cnt<18>
+                                                       seg_map/cnt_17_rstpot
+                                                       seg_map/cnt_17
+    -------------------------------------------------  ---------------------------
+    Total                                      0.979ns (0.680ns logic, 0.299ns route)
+                                                       (69.5% logic, 30.5% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      1.028ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/cnt_17 (FF)
+  Destination:          seg_map/cnt_17 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.028ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/cnt_17 to seg_map/cnt_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y17.CQ       Tcko                  0.198   seg_map/cnt<18>
+                                                       seg_map/cnt_17
+    SLICE_X4Y17.B4       net (fanout=2)        0.129   seg_map/cnt<17>
+    SLICE_X4Y17.BMUX     Topbb                 0.240   seg_map/Mcount_cnt_cy<19>
+                                                       seg_map/cnt<17>_rt
+                                                       seg_map/Mcount_cnt_cy<19>
+    SLICE_X5Y17.C1       net (fanout=1)        0.246   seg_map/Result<17>
+    SLICE_X5Y17.CLK      Tah         (-Th)    -0.215   seg_map/cnt<18>
+                                                       seg_map/cnt_17_rstpot
+                                                       seg_map/cnt_17
+    -------------------------------------------------  ---------------------------
+    Total                                      1.028ns (0.653ns logic, 0.375ns route)
+                                                       (63.5% logic, 36.5% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      1.162ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               seg_map/cnt_15 (FF)
+  Destination:          seg_map/cnt_17 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.162ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sysCLK_BUFGP rising at 10.000ns
+  Destination Clock:    sysCLK_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: seg_map/cnt_15 to seg_map/cnt_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y17.AQ       Tcko                  0.198   seg_map/cnt<18>
+                                                       seg_map/cnt_15
+    SLICE_X4Y16.D5       net (fanout=2)        0.166   seg_map/cnt<15>
+    SLICE_X4Y16.COUT     Topcyd                0.181   seg_map/Mcount_cnt_cy<15>
+                                                       seg_map/cnt<15>_rt
+                                                       seg_map/Mcount_cnt_cy<15>
+    SLICE_X4Y17.CIN      net (fanout=1)        0.001   seg_map/Mcount_cnt_cy<15>
+    SLICE_X4Y17.BMUX     Tcinb                 0.155   seg_map/Mcount_cnt_cy<19>
+                                                       seg_map/Mcount_cnt_cy<19>
+    SLICE_X5Y17.C1       net (fanout=1)        0.246   seg_map/Result<17>
+    SLICE_X5Y17.CLK      Tah         (-Th)    -0.215   seg_map/cnt<18>
+                                                       seg_map/cnt_17_rstpot
+                                                       seg_map/cnt_17
+    -------------------------------------------------  ---------------------------
+    Total                                      1.162ns (0.749ns logic, 0.413ns route)
+                                                       (64.5% logic, 35.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.270ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: sysCLK_BUFGP/BUFG/I0
+  Logical resource: sysCLK_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: sysCLK_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 9.570ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: seg_map/cnt<31>/CLK
+  Logical resource: seg_map/cnt_31/CK
+  Location pin: SLICE_X8Y16.CLK
+  Clock network: sysCLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.606ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.394ns (2538.071MHz) (Tcp)
+  Physical resource: seg_map/cnt<3>/CLK
+  Logical resource: seg_map/cnt_0/CK
+  Location pin: SLICE_X5Y13.CLK
+  Clock network: sysCLK_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock sysCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sysCLK         |    5.709|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 17954 paths, 0 nets, and 216 connections
+
+Design statistics:
+   Minimum period:   5.709ns{1}   (Maximum frequency: 175.162MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sat Jul 19 19:33:14 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 221 MB
+
+
+

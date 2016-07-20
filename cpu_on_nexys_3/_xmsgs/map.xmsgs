@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">nWAIT_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="837" delta="new" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: IOin&lt;31&gt;
+	 Comp: IOin&lt;30&gt;
+	 Comp: IOin&lt;29&gt;
+	 Comp: IOin&lt;28&gt;
+	 Comp: IOin&lt;27&gt;
+	 Comp: IOin&lt;26&gt;
+	 Comp: IOin&lt;25&gt;
+	 Comp: IOin&lt;24&gt;
+	 Comp: IOin&lt;23&gt;
+	 Comp: IOin&lt;22&gt;
+	 Comp: IOin&lt;21&gt;
+	 Comp: IOin&lt;20&gt;
+	 Comp: IOin&lt;19&gt;
+	 Comp: IOin&lt;18&gt;
+	 Comp: IOin&lt;17&gt;
+	 Comp: IOin&lt;16&gt;
+	 Comp: IOin&lt;15&gt;
+	 Comp: IOin&lt;14&gt;
+	 Comp: IOin&lt;13&gt;
+	 Comp: IOin&lt;12&gt;
+	 Comp: IOin&lt;11&gt;
+	 Comp: IOin&lt;10&gt;
+	 Comp: IOin&lt;9&gt;
+	 Comp: IOin&lt;8&gt;
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="new" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: IOin&lt;0&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;1&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;2&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;3&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;4&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;5&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;6&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;7&gt;   IOSTANDARD = LVCMOS33
+	 Comp: IOin&lt;8&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;9&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;10&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;11&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;12&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;13&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;14&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;15&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;16&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;17&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;18&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;19&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;20&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;21&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;22&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;23&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;24&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;25&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;26&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;27&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;28&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;29&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;30&gt;   IOSTANDARD = LVCMOS25
+	 Comp: IOin&lt;31&gt;   IOSTANDARD = LVCMOS25
+
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="837" delta="new" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: PCwatch&lt;23&gt;
+	 Comp: PCwatch&lt;22&gt;
+	 Comp: PCwatch&lt;21&gt;
+	 Comp: PCwatch&lt;20&gt;
+	 Comp: PCwatch&lt;19&gt;
+	 Comp: PCwatch&lt;18&gt;
+	 Comp: PCwatch&lt;17&gt;
+	 Comp: PCwatch&lt;16&gt;
+	 Comp: PCwatch&lt;15&gt;
+	 Comp: PCwatch&lt;14&gt;
+	 Comp: PCwatch&lt;13&gt;
+	 Comp: PCwatch&lt;12&gt;
+	 Comp: PCwatch&lt;11&gt;
+	 Comp: PCwatch&lt;10&gt;
+	 Comp: PCwatch&lt;9&gt;
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="new" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: PCwatch&lt;1&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;2&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;3&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;4&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;5&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;6&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;7&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;8&gt;   IOSTANDARD = LVCMOS33
+	 Comp: PCwatch&lt;9&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;10&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;11&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;12&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;13&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;14&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;15&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;16&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;17&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;18&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;19&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;20&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;21&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;22&gt;   IOSTANDARD = LVCMOS25
+	 Comp: PCwatch&lt;23&gt;   IOSTANDARD = LVCMOS25
+
+</arg>
+</msg>
+
+<msg type="info" file="Place" num="834" delta="new" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">132</arg> IOs, <arg fmt="%d" index="2">81</arg> are locked and <arg fmt="%d" index="3">51</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+</msg>
+
+<msg type="warning" file="Place" num="1109" delta="new" >A clock IOB / BUFGMUX clock component pair have been found that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock IOB component &lt;<arg fmt="%s" index="1">RST</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">A8</arg>&gt;. The corresponding BUFG component &lt;<arg fmt="%s" index="3">RST_IBUF_BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGMUX_X2Y12</arg>&gt;. There is only a select set of IOBs that can use the fast path to the Clocker buffer, and they are not being used. You may want to analyze why this problem exists and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">RST.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="warning" file="Place" num="1109" delta="new" >A clock IOB / BUFGMUX clock component pair have been found that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock IOB component &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">B8</arg>&gt;. The corresponding BUFG component &lt;<arg fmt="%s" index="3">CLK_BUFGP/BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">BUFGMUX_X3Y5</arg>&gt;. There is only a select set of IOBs that can use the fast path to the Clocker buffer, and they are not being used. You may want to analyze why this problem exists and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">CLK.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_2_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_40_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_32_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_24_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_16_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_4_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_42_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_34_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_26_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_18_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_6_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_44_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_36_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_28_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_8_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_46_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_38_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">seg_map/slowclk</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">seg_map/t1_GND_160_o_Mux_22_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_10_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_20_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_12_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_30_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_22_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">fetch_map/RST_GND_8_o_AND_14_o</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">IORW</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+</messages>
+
